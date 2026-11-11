@@ -1,0 +1,28 @@
+{
+  "name": "bare-async-context",
+  "version": "0.1.0",
+  "description": "Async context propagation for Bare: AsyncContext.Variable, Snapshot and AsyncLocalStorage",
+  "exports": {
+    "./package": "./package.json",
+    ".": "./index.js"
+  },
+  "files": ["index.js", "binding.c", "binding.js", "CMakeLists.txt", "prebuilds"],
+  "addon": true,
+  "scripts": {
+    "format": "prettier --write . && lunte --fix",
+    "lint": "prettier --check . && lunte",
+    "test": "brittle-bare test.js"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/holepunchto/bare-async-context.git" },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "engines": { "bare": ">=1.36.2" },
+  "devDependencies": {
+    "brittle": "^3.3.2",
+    "cmake-bare": "^1.1.0",
+    "bare-make": "^1.0.0",
+    "lunte": "^1.8.6",
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^2.0.0"
+  }
+}
